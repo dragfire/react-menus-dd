@@ -6,8 +6,8 @@
 <img src="example/Menus.gif" width="500" height="300"/>
 
 ## Installation
-`npm i -S react-menus-dd`
-or
+`npm i -S react-menus-dd`  
+ or  
 `yarn add react-menus-dd`
 
 ## Usage
@@ -79,6 +79,20 @@ class App extends Component {
 
 export default App;
 ```
+
+## Properties
+
+All properties are optional
+### Menus
+- **`style`** _(Object)_ — Custom style properties which will be added to already existing styles.
+
+### Menu
+- **`style`** _(Object)_ — Custom style properties which will be added to already existing styles.
+
+- **`link`** _(string)_ — Link which is equivalent to *href*.
+
+- **`onClick`** _(func)_ — Invokes when a menu is clicked and text from `<a>Text</a>` is passed as parameter.
+
 ## License
 
 MIT
