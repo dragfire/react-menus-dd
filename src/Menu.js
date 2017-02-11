@@ -26,7 +26,7 @@ const Menu = (props) => {
     <li className="Menu">
       <a
         href={link}
-        onClick={onClick}
+        onClick={() => onClick(text)}
         className="Menu-link"
         style={Styles.menuLink}
       >
@@ -51,7 +51,7 @@ Menu.propTypes = {
 
 Menu.defaultProps = {
   link: '#',
-  onClick: null,
+  onClick: value => console.info(value),
   children: null,
 };
 
