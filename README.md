@@ -7,7 +7,7 @@
 
 ## Installation
 `npm i -S react-menus-dd`  
- or  
+  or    
 `yarn add react-menus-dd`
 
 ## Usage
@@ -82,16 +82,16 @@ export default App;
 
 ## Properties
 
-All properties are optional
+All properties are optional  
 ### Menus
 - **`style`** _(Object)_ — Custom style properties which will be added to already existing styles.
 
 ### Menu
 - **`style`** _(Object)_ — Custom style properties which will be added to already existing styles.
 
-- **`link`** _(string)_ — Link which is equivalent to *href*.
+- **`link`** _(String)_ — Link which is equivalent to *href*.
 
-- **`onClick`** _(func)_ — Invokes when a menu is clicked and text from `<a>Text</a>` is passed as parameter.
+- **`onClick`** _(Func)_ — Invokes when a menu is clicked and text from `<a>Text</a>` is passed as parameter.
 
 ## License
 
