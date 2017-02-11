@@ -1,4 +1,4 @@
-# react-menus
+# react-menus-dd
 
 **A highly configurable dropdown menu in React**
 
@@ -9,7 +9,7 @@
 
 ```javascript
 import React, { Component } from 'react';
-import { Menu, Menus } from 'react-menus';
+import { Menu, Menus } from 'react-menus-dd';
 
 class App extends Component {
   constructor(props, context) {
