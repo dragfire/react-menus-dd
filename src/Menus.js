@@ -26,7 +26,7 @@ Menus.propTypes = {
   children: React.PropTypes.oneOfType([
     React.PropTypes.element,
     React.PropTypes.func,
-    React.PropTypes.arrayOf(React.PropTypes.shape(Menu)),
+    React.PropTypes.arrayOf(Menu),
   ]).isRequired,
 };
 
