@@ -1,12 +1,13 @@
 # react-menus
 
-**A highly configurable dropdown menu in React.**
+**A highly configurable dropdown menu in React**
 
 ## Demo  
-<img src="example/Menus.gif" width="400" height="300"/>
+<img src="example/Menus.gif" width="500" height="300"/>
 
 ## Usage
-``javascript
+
+```javascript
 import React, { Component } from 'react';
 import { Menu, Menus } from 'react-menus';
 
@@ -68,7 +69,7 @@ class App extends Component {
 }
 
 export default App;
-``
+```
 ## License
 
 MIT
