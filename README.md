@@ -5,11 +5,20 @@
 ## Demo  
 <img src="example/Menus.gif" width="500" height="300"/>
 
+## Installation
+`npm i -S react-menus-dd`
+or
+`yarn add react-menus-dd`
+
 ## Usage
 
 ```javascript
 import React, { Component } from 'react';
 import { Menu, Menus } from 'react-menus-dd';
+// or
+const DDMenus = require('react-menus-dd');
+const Menus = DDMenus.Menus;
+const Menu = DDMenus.Menu;
 
 class App extends Component {
   constructor(props, context) {
