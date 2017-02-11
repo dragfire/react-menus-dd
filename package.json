@@ -1,6 +1,6 @@
 {
   "name": "react-menus-dd",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A highly configurable dropdown menu in React",
   "repository": {
     "type": "git",
@@ -20,10 +20,12 @@
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
   "scripts": {
+    "copy:assets": "cp src/menu.css src/menus.css src/arrow_right.png dist/",
     "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
-    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+    "test-watch": "npm run testonly -- --watch --watch-extensions js",
+    "prepare": "npm run prepublish && npm run copy:assets"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
