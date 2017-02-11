@@ -1,0 +1,29 @@
+.Menu {
+  position: relative;
+  text-align: left;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.Menu:hover {
+  background-color: #ececec;
+}
+
+.Menu > ul.Menus {
+  position: absolute;
+  transition: all 1.9s;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1.5s linear;
+}
+
+.Menu:hover > ul.Menus {
+  left: 100%;
+  top: 0;
+  visibility: visible;
+}
+
+.Menu-link {
+  color: #777777;
+  display: block;
+  padding: 0.625rem;
+  padding-right: 2.325rem;
+}
