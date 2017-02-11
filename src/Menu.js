@@ -4,15 +4,15 @@ import ArrowRight from './arrow_right.png';
 
 const Styles = {
   menuLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   arrowRight: {
     position: 'absolute',
     right: 5,
     top: '35%',
     width: 12,
-    height: 12
-  }
+    height: 12,
+  },
 };
 
 const Menu = (props) => {
@@ -32,7 +32,7 @@ const Menu = (props) => {
       >
         {text}
       </a>
-      {children ? <img src={ArrowRight} style={Styles.arrowRight} /> : null}
+      {children ? <img src={ArrowRight} style={Styles.arrowRight} alt="arrow" /> : null}
       {children}
     </li>
   );
@@ -52,6 +52,7 @@ Menu.propTypes = {
 Menu.defaultProps = {
   link: '#',
   onClick: null,
+  children: null,
 };
 
 export default Menu;

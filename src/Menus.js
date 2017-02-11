@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Menu from './Menu';
 import './menus.css';
 
 const Menus = (props) => {
   const { list, children } = props;
-  const className = `Menus`;
+  const className = 'Menus';
   let MenuList = (
-      <ul className={className}>
-        {children}
-      </ul>
+    <ul className={className}>
+      {children}
+    </ul>
   );
 
-  if(!list) {
+  if (!list) {
     MenuList = (
       <div className={className}>
         {children}
       </div>
-    )
+    );
   }
   return MenuList;
 };
