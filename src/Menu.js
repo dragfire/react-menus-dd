@@ -3,9 +3,6 @@ import './menu.css';
 import ArrowRight from './arrow_right.png';
 
 const Styles = {
-  menuLink: {
-    textDecoration: 'none',
-  },
   arrowRight: {
     position: 'absolute',
     right: 5,
@@ -21,6 +18,7 @@ const Menu = (props) => {
     onClick,
     children,
     text,
+    style,
   } = props;
   return (
     <li className="Menu">
@@ -28,7 +26,7 @@ const Menu = (props) => {
         href={link}
         onClick={() => onClick(text)}
         className="Menu-link"
-        style={Styles.menuLink}
+        style={style}
       >
         {text}
       </a>
@@ -41,6 +39,7 @@ const Menu = (props) => {
 Menu.propTypes = {
   link: React.PropTypes.string,
   text: React.PropTypes.string.isRequired,
+  style: React.PropTypes.object,
   children: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.object,
@@ -53,6 +52,7 @@ Menu.defaultProps = {
   link: '#',
   onClick: value => console.info(value),
   children: null,
+  style: null,
 };
 
 export default Menu;

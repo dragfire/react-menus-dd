@@ -24,6 +24,7 @@
 .Menu-link {
   color: #777777;
   display: block;
+  text-decoration: none;
   padding: 0.625rem;
   padding-right: 2.325rem;
 }

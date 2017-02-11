@@ -3,17 +3,21 @@ import Menu from './Menu';
 import './menus.css';
 
 const Menus = (props) => {
-  const { list, children } = props;
+  const {
+    list,
+    children,
+    style,
+  } = props;
   const className = 'Menus';
   let MenuList = (
-    <ul className={className}>
+    <ul className={className} style={style}>
       {children}
     </ul>
   );
 
   if (!list) {
     MenuList = (
-      <div className={className}>
+      <div className={className} style={style}>
         {children}
       </div>
     );
@@ -23,6 +27,7 @@ const Menus = (props) => {
 
 Menus.propTypes = {
   list: React.PropTypes.bool,
+  style: React.PropTypes.object,
   children: React.PropTypes.oneOfType([
     React.PropTypes.element,
     React.PropTypes.func,
@@ -32,6 +37,7 @@ Menus.propTypes = {
 
 Menus.defaultProps = {
   list: true,
+  style: null,
 };
 
 export default Menus;
