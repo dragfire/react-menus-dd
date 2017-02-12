@@ -3,7 +3,8 @@
 **A highly configurable dropdown menu in React**
 
 ## Demo  
-<img src="example/Menus.gif" width="500" height="300"/>
+<img src="example/Menus.gif" width="300" height="150"/>
+<img src="example/Menus1.gif" width="500" height="300"/>
 
 ## Installation
 `npm i -S react-menus-dd`  
