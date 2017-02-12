@@ -7,10 +7,21 @@ class App extends Component {
   }
   
   render() {
+    const Styles = {
+      menusStyle: {
+        boxShadow: '1px 1px 2px rgba(90, 90, 90, 0.7)',
+        border: '1px solid rgba(0, 0, 0, 0.05)',
+      },
+      menuStyle: {
+        color: 'blue',
+        padding: 2,
+      },
+    };
+
     return (
       <div className="App">
-        <Menus>
-          <Menu text="Music" />
+        <Menus style={Styles.menusStyle}>
+          <Menu text="Music" style={Styles.menuStyle} />
           <Menu text="Videos">
             <Menus>
               <Menu link="/comedy" text="Comedy" />
@@ -51,7 +62,21 @@ class App extends Component {
           </Menu>
           <Menu text="Entertainment" />
           <Menu text="Games" />
-          <Menu text="Mp3" />
+          <Menu text="Mp3">
+            <Menus>
+              <div>
+                <h5>Hello</h5>
+                <small>There</small>
+                <ul>
+                  <li>Tom</li>
+                  <li>Is</li>
+                  <li>A</li>
+                  <li>Good</li>
+                  <li>Boy</li>
+                </ul>
+              </div>
+            </Menus>
+          </Menu>
         </Menus>
       </div>
     );
