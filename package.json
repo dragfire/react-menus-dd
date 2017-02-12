@@ -4,14 +4,14 @@
   "description": "A highly configurable dropdown menu in React",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dragfire/react-menus.git"
+    "url": "https://github.com/dragfire/react-menus-dd.git"
   },
   "author": "Devajit Asem ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dragfire/react-menus/issues"
+    "url": "https://github.com/dragfire/react-menus-dd/issues"
   },
-  "homepage": "https://github.com/dragfire/react-menus",
+  "homepage": "https://github.com/dragfire/react-menus-dd",
   "keywords": [
     "react-component",
     "react"
