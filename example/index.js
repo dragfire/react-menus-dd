@@ -1,69 +1,92 @@
 import React, { Component } from 'react';
 import { Menu, Menus } from 'react-menus';
 
+function TriggerComponent({ toggleMenus, label }) {
+  return (
+    <button onClick={toggleMenus}>{label}</button>
+  );
+}
+
 class App extends Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      visible: false,
+      helloMenusVisible: false,
+    }
+  }
+
+  onClick = (text) => {
+    console.info("Text:", text);
   }
   
   render() {
-    const Styles = {
-      menusStyle: {
-        boxShadow: '1px 1px 2px rgba(90, 90, 90, 0.7)',
-        border: '1px solid rgba(0, 0, 0, 0.05)',
-      },
-      menuStyle: {
-        color: 'blue',
-        padding: 2,
-      },
-    };
-
+    const HelloMenus = (
+      <Menus label="Hello Menus" triggerComponent={TriggerComponent}>
+        <Menu text="Hello" />
+        <Menu text="Hello">
+          <SubMenus>
+            <Menu text="There" />
+            <Menu text="There" />
+            <Menu text="There" />
+          </SubMenus>
+        </Menu>
+      </Menus>
+    )
     return (
-      <div className="App">
-        <Menus style={Styles.menusStyle}>
-          <Menu text="Music" style={Styles.menuStyle} />
+      <div className="App" style={{ padding: 100 }}>
+        {/*<div>
+          <button onClick={()=>this.setState({helloMenusVisible: !this.state.helloMenusVisible})}>
+            Hello
+          </button>
+          <div style={{ display: this.state.helloMenusVisible? 'block' : 'none'}}>
+            {HelloMenus}
+          </div>
+        </div>*/}
+        <Menus label="Entertainment" triggerComponent={TriggerComponent}>
+          <Menu text="Music" />
           <Menu text="Videos">
-            <Menus>
-              <Menu link="/comedy" text="Comedy" />
-              <Menu text="Music" >
-                <Menus>
+            <SubMenus style={{ border: '1px solid red' }}>
+              <Menu link="/comedy" text="Comedy" style={{color: '#ac1234'}} />
+              <Menu text="Music" onClick={this.onClick} >
+                <SubMenus>
                   <Menu text="Rock" />
                   <Menu text="Electro" >
-                    <Menus>
+                    <SubMenus>
                       <Menu text="Infected Mushrooms" />
                       <Menu text="Skrillex" />
                       <Menu text="Hyped" />
-                    </Menus>
+                    </SubMenus>
                   </Menu>
                   <Menu text="Alternative Rock" />
-                </Menus>
+                </SubMenus>
               </Menu>
               <Menu text="TV Shows">
-                <Menus>
+                <SubMenus>
                   <Menu text="Animation">
-                    <Menus>
+                    <SubMenus>
                       <Menu text="Rick & Morty" />
                       <Menu text="Naruto" />
                       <Menu text="Simpsons" />
-                    </Menus>
+                    </SubMenus>
                   </Menu>
                   <Menu text="Comedy">
-                    <Menus>
+                    <SubMenus>
                       <Menu text="How I Met Your Mother" />
                       <Menu text="Friends" />
                       <Menu text="Sienfeld" />
                       <Menu text="Two And Half Men" />
-                    </Menus>
+                    </SubMenus>
                   </Menu>
                   <Menu text="Thriller" />
-                </Menus>
+                </SubMenus>
               </Menu>
-            </Menus>
+            </SubMenus>
           </Menu>
           <Menu text="Entertainment" />
           <Menu text="Games" />
           <Menu text="Mp3">
-            <Menus>
+            <SubMenus>
               <div>
                 <h5>Hello</h5>
                 <small>There</small>
@@ -75,9 +98,10 @@ class App extends Component {
                   <li>Boy</li>
                 </ul>
               </div>
-            </Menus>
+            </SubMenus>
           </Menu>
         </Menus>
+        {HelloMenus}
       </div>
     );
   }
