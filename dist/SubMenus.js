@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', './Menu', './menus.css'], factory);
+    define(['exports', 'react', './Menu', 'prop-types', './menus.css'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('./Menu'), require('./menus.css'));
+    factory(exports, require('react'), require('./Menu'), require('prop-types'), require('./menus.css'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.Menu, global.menus);
+    factory(mod.exports, global.react, global.Menu, global.propTypes, global.menus);
     global.SubMenus = mod.exports;
   }
-})(this, function (exports, _react, _Menu) {
+})(this, function (exports, _react, _Menu, _propTypes) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -20,6 +20,8 @@
   var _react2 = _interopRequireDefault(_react);
 
   var _Menu2 = _interopRequireDefault(_Menu);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -56,10 +58,10 @@
   };
 
   SubMenus.propTypes = {
-    list: _react2.default.PropTypes.bool,
-    label: _react2.default.PropTypes.string,
-    style: _react2.default.PropTypes.object,
-    children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.element, _react2.default.PropTypes.func, _react2.default.PropTypes.arrayOf(_Menu2.default)]).isRequired
+    list: _propTypes2.default.bool,
+    label: _propTypes2.default.string,
+    style: _propTypes2.default.object,
+    children: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.func, _propTypes2.default.arrayOf(_Menu2.default)]).isRequired
   };
 
   SubMenus.defaultProps = {
