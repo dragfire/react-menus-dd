@@ -46,7 +46,7 @@ Menu.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 Menu.defaultProps = {
