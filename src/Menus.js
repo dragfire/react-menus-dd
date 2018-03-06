@@ -4,6 +4,7 @@ import Menu from './Menu';
 import SubMenus from './SubMenus';
 import { WrappedComponent, TriggerComponent } from './HelperComponents';
 import './menus.css';
+import PropTypes from 'prop-types';
 
 class Menus extends React.Component {
   constructor(props) {
@@ -69,14 +70,14 @@ class Menus extends React.Component {
 }
 
 Menus.propTypes = {
-  list: React.PropTypes.bool,
-  label: React.PropTypes.string,
-  style: React.PropTypes.object,
-  triggerComponent: React.PropTypes.func,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.func,
-    React.PropTypes.arrayOf(Menu),
+  list: PropTypes.bool,
+  label: PropTypes.string,
+  style: PropTypes.object,
+  triggerComponent: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.func,
+    PropTypes.arrayOf(Menu),
   ]).isRequired,
 };
 
