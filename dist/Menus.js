@@ -1,16 +1,16 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', 'react-dom', './Menu', './SubMenus', './HelperComponents', './menus.css'], factory);
+    define(['exports', 'react', 'react-dom', './Menu', './SubMenus', './HelperComponents', 'prop-types', './menus.css'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('react-dom'), require('./Menu'), require('./SubMenus'), require('./HelperComponents'), require('./menus.css'));
+    factory(exports, require('react'), require('react-dom'), require('./Menu'), require('./SubMenus'), require('./HelperComponents'), require('prop-types'), require('./menus.css'));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.react, global.reactDom, global.Menu, global.SubMenus, global.HelperComponents, global.menus);
+    factory(mod.exports, global.react, global.reactDom, global.Menu, global.SubMenus, global.HelperComponents, global.propTypes, global.menus);
     global.Menus = mod.exports;
   }
-})(this, function (exports, _react, _reactDom, _Menu, _SubMenus, _HelperComponents) {
+})(this, function (exports, _react, _reactDom, _Menu, _SubMenus, _HelperComponents, _propTypes) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -24,6 +24,8 @@
   var _Menu2 = _interopRequireDefault(_Menu);
 
   var _SubMenus2 = _interopRequireDefault(_SubMenus);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -163,11 +165,11 @@
   }(_react2.default.Component);
 
   Menus.propTypes = {
-    list: _react2.default.PropTypes.bool,
-    label: _react2.default.PropTypes.string,
-    style: _react2.default.PropTypes.object,
-    triggerComponent: _react2.default.PropTypes.func,
-    children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.element, _react2.default.PropTypes.func, _react2.default.PropTypes.arrayOf(_Menu2.default)]).isRequired
+    list: _propTypes2.default.bool,
+    label: _propTypes2.default.string,
+    style: _propTypes2.default.object,
+    triggerComponent: _propTypes2.default.func,
+    children: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.func, _propTypes2.default.arrayOf(_Menu2.default)]).isRequired
   };
 
   Menus.defaultProps = {

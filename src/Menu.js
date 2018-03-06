@@ -1,6 +1,7 @@
 import React from 'react';
 import './menu.css';
 import ArrowRight from './arrow_right.png';
+import PropTypes from 'prop-types';
 
 const Styles = {
   arrowRight: {
@@ -37,15 +38,15 @@ const Menu = (props) => {
 };
 
 Menu.propTypes = {
-  link: React.PropTypes.string,
-  text: React.PropTypes.string.isRequired,
-  style: React.PropTypes.object,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object,
-    React.PropTypes.func,
+  link: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  style: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func,
   ]),
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 Menu.defaultProps = {

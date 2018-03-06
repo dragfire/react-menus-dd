@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
 import './menus.css';
+import PropTypes from 'prop-types';
 
 const SubMenus = (props) => {
   const {
@@ -33,13 +34,13 @@ const SubMenus = (props) => {
 
 
 SubMenus.propTypes = {
-  list: React.PropTypes.bool,
-  label: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.func,
-    React.PropTypes.arrayOf(Menu),
+  list: PropTypes.bool,
+  label: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.func,
+    PropTypes.arrayOf(Menu),
   ]).isRequired,
 };
 
