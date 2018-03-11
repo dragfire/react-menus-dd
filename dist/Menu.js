@@ -71,7 +71,7 @@
     text: _propTypes2.default.string.isRequired,
     style: _propTypes2.default.object,
     children: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object, _propTypes2.default.func]),
-    onClick: _react2.default.PropTypes.func
+    onClick: _propTypes2.default.func
   };
 
   Menu.defaultProps = {
