@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Menu from './Menu';
 import SubMenus from './SubMenus';
 import { WrappedComponent, TriggerComponent } from './HelperComponents';
 import './menus.css';
-import PropTypes from 'prop-types';
 
 class Menus extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ class Menus extends React.Component {
   }
 
   componentDidMount() {
-    this.element = ReactDOM.findDOMNode(this);
+    this.element = this.node;
     window.addEventListener('click', this.onDOMClick);
   }
 

@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Menu from './Menu';
 import './menus.css';
-import PropTypes from 'prop-types';
 
 const SubMenus = (props) => {
   const {
