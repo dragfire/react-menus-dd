@@ -1,7 +1,9 @@
+/*eslint no-console: ["error", { allow: ["warn", "error", "info"] }] */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './menu.css';
 import ArrowRight from './arrow_right.png';
-import PropTypes from 'prop-types';
+
 
 const Styles = {
   arrowRight: {
@@ -15,11 +17,7 @@ const Styles = {
 
 const Menu = (props) => {
   const {
-    link,
-    onClick,
-    children,
-    text,
-    style,
+    link, onClick, children, text, style,
   } = props;
   return (
     <li className="Menu">
@@ -31,7 +29,9 @@ const Menu = (props) => {
       >
         {text}
       </a>
-      {children ? <img src={ArrowRight} style={Styles.arrowRight} alt="arrow" /> : null}
+      {children ? (
+        <img src={ArrowRight} style={Styles.arrowRight} alt="arrow" />
+      ) : null}
       {children}
     </li>
   );
